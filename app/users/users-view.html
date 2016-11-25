@@ -1,3 +1,19 @@
 <div ng-repeat="user in usersCtrl.users">
-    <img ng-src="{{user.picture.large}}" />
+    <br><br>
+
+    <div class="container-fluid well span6">
+    	<div class="row-fluid">
+            <div class="span2" >
+    		    <img ng-src="{{user.picture.medium}}" class="img-circle">
+            </div>
+
+            <div class="span8">
+                <h3>{{user.name.first}} {{user.name.last}}</h3>
+                <h9>{{user.login.username}}</h9>
+                <h6>Email: {{user.email}}</h6>
+                <h6>Ubication: {{user.location.street}} {{user.location.city}}, {{user.location.state}}. {{user.location.postcode}}.</h6>
+                <h6>Phone: {{user.phone}}</h6>
+            </div>
+        </div>
+    </div>
 </div>

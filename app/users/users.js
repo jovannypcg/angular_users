@@ -16,10 +16,5 @@ app.controller('usersCtrl', ['$http', function($http) {
 
     $http.get('https://randomuser.me/api/?results=10').success(data => {
         ctrl.users = data.results;
-        for (let user of ctrl.users) {
-            console.log(user.picture.large);
-        }
-    }).error(err => {
-
     });
 }]);
